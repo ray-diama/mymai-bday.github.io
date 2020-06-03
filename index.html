@@ -7,7 +7,7 @@
 	<style type="text/css">
 		@font-face{
 			font-family: "happyBirthday";
-			src: url("assets/HappyBirthday-Regular.ttf");
+			src: url("HappyBirthday-Regular.ttf");
 		}
 		body{
 			background-color:#000;
@@ -18,7 +18,7 @@
 		}
 		.slide1{
 			position:relative;
-			background-image: url(assets/pic_1.jpg);
+			background-image: url(pic_1.jpg);
 			background-repeat: no-repeat;
 			height: 1600px;
 			width: 1200px;
@@ -27,7 +27,6 @@
 			font-weight: bold;
 			text-transform: uppercase;
 			font-size: 24pt;
-			//text-align: left;
 			text-shadow: 2px 2px 2px rgba(110,35,1,0.3);
 			color:rgba(148,91,45,0.3);
 			word-spacing: 48pt;
@@ -96,8 +95,6 @@
 			
 			for(var i=1; i<hbd.length; i++){
 				if(hbd[i].nodeName.toLowerCase() =="span"){
-					//let randomColor = 
-					//let randomColor2 = Math.floor(Math.random()*16777215).toString(16);
 					hbd[i].style.color = "#"+Math.floor(Math.random()*16777215).toString(16);;
 					hbd[i].style.backgroundColor = "#"+Math.floor(Math.random()*16777215).toString(16);;
 				}
