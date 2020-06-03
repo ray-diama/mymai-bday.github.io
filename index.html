@@ -1,36 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Happy birthDay Maïssarath</title>
-    <style>
-      body{
-        margin:0 auto;
-        width:80%;
-      }
-      .container{
-        background-color:rgb(210,130,45);
-        width:100%;
-        max-height:600px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <section id="selectors-introduction">
-			<h3>Introduction</h3>
-			<p>
-				<abbr title="Cascading Stylesheet">Css</abbr> is a rule based language made to put on some styling on our <abbr title="HyperText Mark-up Language">html</abbr> by selecting the desired element we wish to make fancy.
-			</p>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1">
+	<title>Happy Birthday Maïsarrath</title>
+	<style type="text/css">
+		@font-face{
+			font-family: "happyBirthday";
+			src: url("assets/HappyBirthday-Regular.ttf");
+		}
+		body{
+			background-color:#000;
+			width: 1200px;
+			margin: 0 auto;
+			align-self: center;
+			font-family: sans-serif;
+		}
+		.slide1{
+			position:relative;
+			background-image: url(assets/pic_1.jpg);
+			background-repeat: no-repeat;
+			height: 1600px;
+			width: 1200px;
+		}
+		#slide-text{
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 24pt;
+			//text-align: left;
+			text-shadow: 2px 2px 2px rgba(110,35,1,0.3);
+			color:rgba(148,91,45,0.3);
+			word-spacing: 48pt;
+		}
+		.left{
+			float: right;
+			height:1600px;
+			width: 1200px;
+			background-color:rgba(200,200,200,0.1);
+			shape-outside: polygon(77.16% 94.7%, 75.25% 18.25%, 52.42% 16.25%, 27.33% 94.50%);
+		}
+		#hbd{
+			position: absolute;
+			bottom:-10%;
 			
-			<p>From CSS1 to CSS3, selectors - ways and means to selecting/choosing elements on our document - have evolved as they got more and more defined as a structure or a condition through which the computer determines which element in the document corresponds the most.</p>
+			font-family: "happyBirthday";
+			color: rgb(253,206,2);
+			font-size:164pt;
+			text-shadow: 2px 2px 2px #fff;
+		}
+		#hbd span{
+			margin: 10px;
+			border-radius: 50%;
+		}
+		.footer{
+			background-color:rgb(5,5,5);
+			margin-top:10px;
+			padding:30px 0px 30px 0px; 
+			border-radius: 50px 50px;
+			color:rgb(250,250,250);
+			font-size: 24pt;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="slide-show-holder">
 
-			<p>And now we can be either very specific or vague and very varied in our selection, as it goes from selecting an element or a description of an element or a group of elements we would like to select</p>
-
-			<p>And at the same time, this subject is the one I have the hardest time with. Therefore to help myself, following is a <a href="https://www.w3.org/TR/selectors-3/#selectors">table summarising the selector syntax</a> gotten from the official site of <a href="https://www.w3.org/">W3C</a></p>
-
-			<p>We see each of them</p>
-		</section>
-    </div>
-  </body>
-</hmtl> 
+		<div id="slide1" class="slide1">
+			
+			<div id="slide-img">
+			<!--	<svg viewBox="0 0 1193 220">
+					<path id="lineAB" d="M 0.5 219 L 596 0" stroke="red" stroke-witdh="20" fill="none"/>
+					<path id="lineBC" d="M 596 0 L 1192.5 219" stroke="blue" stroke-witdh="20" fill="none"/>
+					<path id="myCurve" d="M 298.25 219 Q 732.875 0 1167.5 219" stroke="green" stroke-witdh="20" fill="none"/>
+				</svg>
+			-->
+				<div class="left"></div>
+				<p id="slide-text"></p>
+				
+			</div>
+				<p id="hbd"><span>H</span><span class="blue">a</span>P</span><span class="blue">p</span><span class="red">y</span><span class="blue"><br></span><span class="red">B</span><span class="red">i</span><span class="red">R</span><span class="red">t</span><span class="red">H</span><span class="blue">d</span><span class="red">A</span><span class="blue">y</span></p>
+		</div>
+		
+	</div>
+	<div class="footer">
+		<p>Check out her <a href="https://mylowcosttrip.blog">blog</a> (>A<) </p>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			let arr=["ever shining", "ever beautiful", "MBA special","ChinAf", "We wish You Success","We Love You", "Maïssarath","best blogger","be blessed", "you are undoubtly loved"];
+			let p = document.getElementById('slide-text');
+			let img = document.getElementById('slide1');
+			let hbd = document.getElementById("hbd").childNodes;
+			
+			for(var i=1; i<hbd.length; i++){
+				if(hbd[i].nodeName.toLowerCase() =="span"){
+					//let randomColor = 
+					//let randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+					hbd[i].style.color = "#"+Math.floor(Math.random()*16777215).toString(16);;
+					hbd[i].style.backgroundColor = "#"+Math.floor(Math.random()*16777215).toString(16);;
+				}
+			};
+			console.log(img.clientHeight);
+			while(p.clientHeight<img.clientHeight){
+				p.appendChild(document.createTextNode(arr[Math.floor(Math.random()*5)]+" "));
+			}/**/
+			console.log(p.clientHeight);
+		})();
+	</script>
+</div>
+</body>
+</html>
