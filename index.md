@@ -1,1 +1,20 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Happy birthDay Maïssarath</title>
+    <style>
+      body{
+        margin:0 auto;
+        width:80%;
+      }
+      .container{
+        background-color:black;
+        max-height:600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div
+  </body>
+</hmtl> 
